@@ -2,6 +2,8 @@
 
 namespace CollabCorp\LaravelImmigrations;
 
+use CollabCorp\LaravelImmigrations\Contracts\Immigration;
+
 /**
  * Class Queue
  *
@@ -10,176 +12,179 @@ namespace CollabCorp\LaravelImmigrations;
  */
 class Queue
 {
-    /**
-     * The executed immigrations
-     *
-     * @var array
-     */
-    protected $executed = [];
+	/**
+	 * The executed immigrations
+	 *
+	 * @var array
+	 */
+	protected $executed = [];
 
-    /**
-     * The skipped immigrations
-     *
-     * @var array
-     */
-    protected $skipped = [];
+	/**
+	 * The skipped immigrations
+	 *
+	 * @var array
+	 */
+	protected $skipped = [];
 
-    /**
-     * The remaining immigrations
-     *
-     * @var array
-     */
-    protected $remaining = [];
+	/**
+	 * The remaining immigrations
+	 *
+	 * @var array
+	 */
+	protected $remaining = [];
 
-    /**
-     * Queue constructor.
-     *
-     * @param array $remaining
-     */
-    public function __construct(array $remaining)
-    {
-        $this->remaining = $remaining;
-    }
+	/**
+	 * Push one or multiple immigrations onto the queue
+	 *
+	 * @param array $remaining
+	 * @return $this
+	 */
+	public function push(array $remaining)
+	{
+		$this->remaining = array_merge($this->remaining, $remaining);
 
-    /**
-     * Iterate over the remaining immigrations
-     *
-     * @param \Closure $callback
-     */
-    public function run(\Closure $callback)
-    {
-        while ($immigration = array_shift($this->remaining)) {
-            // To allow for partially seeding the database,
-            // a immigration may declare itself as already executed.
-            if (property_exists($immigration, 'hasBeenExecuted') && $immigration->hasBeenExecuted) {
-                $this->executed[$this->key($immigration)] = $immigration;
-                continue;
-            }
+		return $this;
+	}
 
-            if (! $immigration->shouldRun($this)) {
-                $this->skipped[$this->key($immigration)] = $immigration;
-                continue;
-            }
+	/**
+	 * Iterate over the remaining immigrations
+	 *
+	 * @param \Closure $callback
+	 */
+	public function run(\Closure $callback)
+	{
+		while ($immigration = array_shift($this->remaining)) {
+			// To allow for partially seeding the database,
+			// a immigration may declare itself as already executed.
+			if (property_exists($immigration, 'hasBeenExecuted') && $immigration->hasBeenExecuted) {
+				$this->executed[$this->key($immigration)] = $immigration;
+				continue;
+			}
 
-            if ($callback($immigration) !== false) {
-                $this->executed[$this->key($immigration)] = $immigration;
-            }
-        }
-    }
+			if (! $immigration->shouldRun($this)) {
+				$this->skipped[$this->key($immigration)] = $immigration;
+				continue;
+			}
 
-    /**
-     * Whether given immigration has been skipped
-     *
-     * @param array|string|Immigration $immigration
-     * @return bool
-     */
-    public function skipped($immigration): bool
-    {
-        return $this->immigrationExistsIn($this->skipped, $immigration);
-    }
+			if ($callback($immigration) !== false) {
+				$this->executed[$this->key($immigration)] = $immigration;
+			}
+		}
+	}
 
-    /**
-     * Whether given immigration has been executed
-     *
-     * @param array|string|Immigration $immigration
-     * @return bool
-     */
-    public function executed($immigration): bool
-    {
-        return $this->immigrationExistsIn($this->executed, $immigration);
-    }
+	/**
+	 * Whether given immigration has been skipped
+	 *
+	 * @param array|string|Immigration $immigration
+	 * @return bool
+	 */
+	public function skipped($immigration): bool
+	{
+		return $this->immigrationExistsIn($this->skipped, $immigration);
+	}
 
-    /**
-     * Whether given immigration pending
-     *
-     * @param string|Immigration $immigration
-     * @return bool
-     */
-    public function remaining($immigration): bool
-    {
-        return $this->immigrationExistsIn($this->remaining, $immigration);
-    }
+	/**
+	 * Whether given immigration has been executed
+	 *
+	 * @param array|string|Immigration $immigration
+	 * @return bool
+	 */
+	public function executed($immigration): bool
+	{
+		return $this->immigrationExistsIn($this->executed, $immigration);
+	}
 
-    /**
-     * alias for remaining
-     *
-     * @param string|Immigration $immigration
-     * @return bool
-     */
-    public function pending($immigration): bool
-    {
-        return $this->remaining($immigration);
-    }
+	/**
+	 * Whether given immigration pending
+	 *
+	 * @param string|Immigration $immigration
+	 * @return bool
+	 */
+	public function remaining($immigration): bool
+	{
+		return $this->immigrationExistsIn($this->remaining, $immigration);
+	}
 
-    /**
-     * Get one or multiple executed immigration(s)
-     *
-     * @param string|Immigration|null $immigration
-     * @return array|Immigration|null
-     */
-    public function getExecuted($immigration = null)
-    {
-        if ($immigration) {
-            return $this->executed[$this->key($immigration)] ?? null;
-        }
+	/**
+	 * alias for remaining
+	 *
+	 * @param string|Immigration $immigration
+	 * @return bool
+	 */
+	public function pending($immigration): bool
+	{
+		return $this->remaining($immigration);
+	}
 
-        return $this->executed;
-    }
+	/**
+	 * Get one or multiple executed immigration(s)
+	 *
+	 * @param string|Immigration|null $immigration
+	 * @return array|Immigration|null
+	 */
+	public function getExecuted($immigration = null)
+	{
+		if ($immigration) {
+			return $this->executed[$this->key($immigration)] ?? null;
+		}
 
-    /**
-     * Get one or multiple skipped immigration(s)
-     *
-     * @param string|Immigration|null $immigration
-     * @return array|Immigration|null
-     */
-    public function getSkipped($immigration = null)
-    {
-        if ($immigration) {
-            return $this->skipped[$this->key($immigration)] ?? null;
-        }
+		return $this->executed;
+	}
 
-        return $this->skipped;
-    }
+	/**
+	 * Get one or multiple skipped immigration(s)
+	 *
+	 * @param string|Immigration|null $immigration
+	 * @return array|Immigration|null
+	 */
+	public function getSkipped($immigration = null)
+	{
+		if ($immigration) {
+			return $this->skipped[$this->key($immigration)] ?? null;
+		}
 
-    /**
-     * Get one or multiple remaining immigration(s)
-     *
-     * @param string|Immigration|null $immigration
-     * @return array|Immigration|null
-     */
-    public function getRemaining($immigration = null)
-    {
-        if ($immigration) {
-            return $this->remaining[$this->key($immigration)] ?? null;
-        }
+		return $this->skipped;
+	}
 
-        return $this->remaining;
-    }
+	/**
+	 * Get one or multiple remaining immigration(s)
+	 *
+	 * @param string|Immigration|null $immigration
+	 * @return array|Immigration|null
+	 */
+	public function getRemaining($immigration = null)
+	{
+		if ($immigration) {
+			return $this->remaining[$this->key($immigration)] ?? null;
+		}
 
-    /**
-     * cast given immigration to a repository key
-     *
-     * @param string|Immigration $immigration
-     * @return string
-     */
-    protected function key($immigration): string
-    {
-        if (is_string($immigration) && class_exists($immigration)) {
-            return $immigration;
-        }
+		return $this->remaining;
+	}
 
-        //return spl_object_hash($immigration);
-        return get_class($immigration);
-    }
+	/**
+	 * cast given immigration to a repository key
+	 *
+	 * @param string|Immigration $immigration
+	 * @return string
+	 */
+	protected function key($immigration): string
+	{
+		if (is_string($immigration) && class_exists($immigration)) {
+			return $immigration;
+		}
 
-    private function immigrationExistsIn(array $items, $immigration): bool
-    {
-        foreach (array_wrap($immigration) as $item) {
-            if (! array_key_exists($this->key($item), $items)) {
-                return false;
-            }
-        }
+		//return spl_object_hash($immigration);
+		return get_class($immigration);
+	}
 
-        return true;
-    }
+	private function immigrationExistsIn(array $items, $immigration): bool
+	{
+		foreach (array_wrap($immigration) as $item) {
+			if (! array_key_exists($this->key($item), $items)) {
+				return false;
+			}
+		}
+
+		return true;
+	}
 }

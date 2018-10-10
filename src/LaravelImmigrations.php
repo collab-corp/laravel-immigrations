@@ -34,6 +34,13 @@ class LaravelImmigrations
 	 */
     protected $output;
 
+	/**
+	 * The immigrations queue
+	 *
+	 * @var Queue
+	 */
+	protected $queue;
+
     /**
      * The default column to order the database records by
      *
@@ -60,7 +67,40 @@ class LaravelImmigrations
         $this->database = $database;
         $this->registry = $registry;
         $this->output = $output;
+	    $this->queue = new Queue;
     }
+
+	/**
+	 * @return Database
+	 */
+	public function database(): Database
+	{
+		return $this->database;
+	}
+
+	/**
+	 * @return Registry
+	 */
+	public function registry(): Registry
+	{
+		return $this->registry;
+	}
+
+	/**
+	 * @return Writer
+	 */
+	public function output(): Writer
+	{
+		return $this->output;
+	}
+
+	/**
+	 * @return Queue
+	 */
+	public function queue(): Queue
+	{
+		return $this->queue;
+	}
 
     /**
      * The instantiated immigrations
@@ -88,19 +128,19 @@ class LaravelImmigrations
         $this->database
             ->connection()
             ->transaction(function () {
-                $queue = new Queue($this->instantiateImmigrations());
+	            $this->queue
+		            ->push($this->instantiateImmigrations())
+		            ->run(function (Immigration $immigration) {
+			            $this->setDatabaseOrderForImmigration($immigration);
 
-                $queue->run(function (Immigration $immigration) use ($queue) {
-                    $this->setDatabaseOrderForImmigration($immigration);
+			            if ($this->queue->skipped($immigration)) {
+				            $this->output->warning('skipping immigration [' . get_class($immigration) . '].');
+				            return;
+			            }
 
-                    if ($queue->skipped($immigration)) {
-                        $this->output->warning('skipping immigration ['.get_class($immigration).'].');
-                        return;
-                    }
-
-                    $this->output->info('running immigration ['.get_class($immigration).'].');
-                    $immigration->run($this->database);
-                });
+			            $this->output->info('running immigration [' . get_class($immigration) . '].');
+			            $immigration->run($this->database);
+		            });
             });
     }
 

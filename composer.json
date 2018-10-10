@@ -32,7 +32,8 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "CollabCorp\\LaravelImmigrations\\": "src/"
+      "CollabCorp\\LaravelImmigrations\\": "src/",
+      "CollabCorp\\LaravelImmigrations\\Tests\\": "tests/"
     }
   },
   "extra": {

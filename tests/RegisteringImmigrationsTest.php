@@ -6,7 +6,6 @@ use CollabCorp\LaravelImmigrations\Contracts\Immigration;
 use CollabCorp\LaravelImmigrations\Database;
 use CollabCorp\LaravelImmigrations\Facades\Immigrations;
 use CollabCorp\LaravelImmigrations\Queue;
-use Orchestra\Testbench\TestCase;
 
 class RegisteringImmigrationsTest extends TestCase
 {

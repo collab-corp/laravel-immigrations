@@ -4,30 +4,44 @@ namespace CollabCorp\LaravelImmigrations\Facades;
 
 
 use CollabCorp\LaravelImmigrations\LaravelImmigrations;
-use CollabCorp\LaravelImmigrations\Registry;
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Immigrations
  *
- * @method static Registry register(...$immigrations)
- * @method static array registered()
+ * @method static void run()
+ * @purpose to provide an easy interface to interact with the underlying system(s).
  * @package CollabCorp\LaravelImmigrations\Facades
  */
 class Immigrations extends Facade
 {
 	protected static function getFacadeAccessor()
 	{
-		return Registry::class;
+		return LaravelImmigrations::class;
 	}
 
-	/**
-	 * Run the registered immigrations
-	 *
-	 * @throws \Throwable
-	 */
-	public static function run(): void
+	public static function register($immigrations)
 	{
-		static::$app->make(LaravelImmigrations::class)->run();
+		static::getFacadeRoot()->registry()->register($immigrations);
+	}
+
+	public static function registered(): array
+	{
+		return static::getFacadeRoot()->registry()->registered();
+	}
+
+	public static function skipped(): array
+	{
+		return static::getFacadeRoot()->queue()->getSkipped();
+	}
+
+	public static function executed(): array
+	{
+		return static::getFacadeRoot()->queue()->getExecuted();
+	}
+
+	public static function remaining(): array
+	{
+		return static::getFacadeRoot()->queue()->getRemaining();
 	}
 }

@@ -25,6 +25,10 @@ class LaravelImmigrationsServiceProvider extends ServiceProvider
 	            MakeImmigrationCommand::class
             ]);
         }
+
+	    $this->publishes([
+		    __DIR__.'/../config/immigrations.php' => config_path('immigrations.php'),
+	    ]);
     }
 
     /**

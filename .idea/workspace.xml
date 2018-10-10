@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/Testing/WriterFake.php" line="34" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca367ee-d210-4606-8ca0-516320a35c2c" name="Default Changelist" comment="" />
+    <list default="true" id="4ca367ee-d210-4606-8ca0-516320a35c2c" name="Default Changelist" comment="Some tests and bug fixes :)">
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-immigrations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-immigrations.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,45 +23,50 @@
     <session id="1320769860">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="json" value="1" />
-          <entry key="md" value="3" />
-          <entry key="php" value="56" />
+          <entry key="json" value="2" />
+          <entry key="md" value="4" />
+          <entry key="php" value="124" />
+          <entry key="stub" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="1" />
-          <entry key="Markdown" value="3" />
-          <entry key="PHP" value="56" />
+          <entry key="JSON" value="2" />
+          <entry key="Markdown" value="4" />
+          <entry key="PHP" value="124" />
+          <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="json" value="341" />
-          <entry key="md" value="5582" />
-          <entry key="php" value="7255" />
-          <entry key="txt" value="32" />
+          <entry key="dummy" value="15" />
+          <entry key="json" value="355" />
+          <entry key="md" value="5602" />
+          <entry key="php" value="11874" />
+          <entry key="stub" value="76" />
+          <entry key="txt" value="148" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="341" />
-          <entry key="Markdown" value="5531" />
-          <entry key="PHP" value="7306" />
-          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="JSON" value="355" />
+          <entry key="Markdown" value="5551" />
+          <entry key="PHP" value="11925" />
+          <entry key="PLAIN_TEXT" value="239" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options" />
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="5" />
-          <entry key="PHP Interface.type" value="2" />
+          <entry key="PHP Class.type" value="11" />
+          <entry key="PHP Interface.type" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -80,62 +92,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LaravelImmigrationsServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="e#50#121#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/RegisteringImmigrationsTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-              <folding>
-                <element signature="e#56#113#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/RunningRegisteredImmigrationsTest.php">
+        <entry file="file://$PROJECT_DIR$/tests/CommandsTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-              <folding>
-                <element signature="e#57#114#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="450">
+              <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Registry.php">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-              <folding>
-                <element signature="e#51#108#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="118">
+              <caret line="390" column="20" selection-start-line="390" selection-start-column="20" selection-end-line="390" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Guards.php">
+        <entry file="file://$PROJECT_DIR$/src/Console/Commands/DbImmigrateCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-              <folding>
-                <element signature="e#50#107#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="382">
+              <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -143,36 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Facades/Immigrations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-              <folding>
-                <element signature="e#59#114#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/immigrations.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="4248">
-                <caret line="241" column="47" selection-start-line="241" selection-start-column="47" selection-end-line="241" selection-end-column="47" />
-                <folding>
-                  <element signature="e#6#45#0" expanded="true" />
-                  <element signature="e#6#45#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="180">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -180,11 +131,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LaravelImmigrations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-              <folding>
-                <element signature="e#50#107#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-300">
+              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LaravelImmigrationsServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -199,6 +165,7 @@
       <find>createProgressBar</find>
       <find>self::getInstance()</find>
       <find>my_mod</find>
+      <find>prov</find>
     </findStrings>
     <replaceStrings>
       <replace>Easily migrate data from one database to another</replace>
@@ -207,7 +174,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/vendor/psr/container" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -215,31 +182,44 @@
         <option value="$PROJECT_DIR$/src/DatabaseImmigration.php" />
         <option value="$PROJECT_DIR$/src/DatabaseImmigrationServiceProvider.php" />
         <option value="$PROJECT_DIR$/config/laravel-immigrations.php" />
-        <option value="$PROJECT_DIR$/src/Console/Commands/DbImmigrateCommand.php" />
         <option value="$PROJECT_DIR$/src/Immigrations.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Database/Contracts/QueryProcessor.php" />
-        <option value="$PROJECT_DIR$/src/Database.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Immigration.php" />
         <option value="$PROJECT_DIR$/src/Contracts/ConsoleOutput.php" />
-        <option value="$PROJECT_DIR$/src/LaravelImmigrations.php" />
         <option value="$PROJECT_DIR$/src/Contracts/OutputInterface.php" />
         <option value="$PROJECT_DIR$/src/Console/Concerns/DelegatesToConsole.php" />
         <option value="$PROJECT_DIR$/src/Console/Concerns/DelegatesToOutput.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Writer.php" />
         <option value="$PROJECT_DIR$/src/Console.php" />
         <option value="$PROJECT_DIR$/src/Console/ProgressBar.php" />
-        <option value="$PROJECT_DIR$/src/Database/QueryProcessor.php" />
         <option value="$PROJECT_DIR$/src/Contracts/TerminalOutput.php" />
-        <option value="$PROJECT_DIR$/src/LaravelImmigrationsServiceProvider.php" />
         <option value="$PROJECT_DIR$/config/immigrations.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Facades/Immigrations.php" />
+        <option value="$PROJECT_DIR$/src/Database/QueryProcessor.php" />
+        <option value="$PROJECT_DIR$/tests/TestMigration.php" />
+        <option value="$PROJECT_DIR$/tests/TestImmigration.php" />
+        <option value="$PROJECT_DIR$/src/Testing/WriterFake.php" />
         <option value="$PROJECT_DIR$/src/Guards.php" />
+        <option value="$PROJECT_DIR$/src/Testing/ImmigrationFake.php" />
+        <option value="$PROJECT_DIR$/tests/DbImmigrateCommandTest.php" />
         <option value="$PROJECT_DIR$/src/Registry.php" />
-        <option value="$PROJECT_DIR$/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/src/Queue.php" />
         <option value="$PROJECT_DIR$/tests/RegisteringImmigrationsTest.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/tests/TestCase.php" />
         <option value="$PROJECT_DIR$/tests/RunningRegisteredImmigrationsTest.php" />
+        <option value="$PROJECT_DIR$/src/Console/Commands/stubs/immigration.stub" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/PendingCommand.php" />
+        <option value="$PROJECT_DIR$/vendor/symfony/console/Input/Input.php" />
+        <option value="$PROJECT_DIR$/src/Console/Commands/MakeImmigrationCommand.php" />
+        <option value="$PROJECT_DIR$/src/Contracts/DatabaseConnection.php" />
+        <option value="$PROJECT_DIR$/src/Facades/Immigrations.php" />
+        <option value="$PROJECT_DIR$/src/Database.php" />
+        <option value="$PROJECT_DIR$/src/Console/Commands/DbImmigrateCommand.php" />
+        <option value="$PROJECT_DIR$/src/LaravelImmigrations.php" />
+        <option value="$PROJECT_DIR$/src/LaravelImmigrationsServiceProvider.php" />
+        <option value="$PROJECT_DIR$/tests/CommandsTest.php" />
       </list>
     </option>
   </component>
@@ -321,7 +301,7 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
@@ -359,19 +339,20 @@
               <item name="laravel-immigrations" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravel-immigrations" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel-immigrations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel-immigrations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Contracts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="laravel-immigrations" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravel-immigrations" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel-immigrations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel-immigrations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Facades" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="laravel-immigrations" type="b2602c69:ProjectViewProjectNode" />
@@ -386,7 +367,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Builder&#9;null&#9;null&#10;Model&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="Make&#9;FILE&#9;file:///Users/jonas/Code/PHP/Laravel/laravel-immigrations/vendor/laravel/framework/src/Illuminate/Routing/Console/ControllerMakeCommand.php&#10;immigrat&#9;FILE&#9;file:///Users/jonas/Code/PHP/Laravel/laravel-immigrations/src/Contracts/Immigration.php&#10;controller.stub&#9;FILE&#9;file:///Users/jonas/Code/PHP/Laravel/laravel-immigrations/vendor/laravel/framework/src/Illuminate/Routing/Console/stubs/controller.stub&#10;MakeCommand&#9;FILE&#9;file:///Users/jonas/Code/PHP/Laravel/laravel-immigrations/vendor/laravel/framework/src/Illuminate/Routing/Console/ControllerMakeCommand.php&#10;DB&#9;FILE&#9;file:///Users/jonas/Code/PHP/Laravel/laravel-immigrations/vendor/laravel/framework/src/Illuminate/Support/Facades/DB.php&#10;Builder&#9;null&#9;null&#10;Model&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -396,6 +377,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Testing" />
       <recent name="$PROJECT_DIR$/src/Contracts" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -412,29 +394,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.RegisteringImmigrationsTest">
+  <component name="RunManager" selected="PHPUnit.tests">
+    <configuration name="CommandsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="CollabCorp\LaravelImmigrations\Tests\CommandsTest" file="$PROJECT_DIR$/tests/CommandsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="RegisteringImmigrationsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="CollabCorp\LaravelImmigrations\Tests\RegisteringImmigrationsTest" file="$PROJECT_DIR$/tests/RegisteringImmigrationsTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisteringImmigrationsTest.canRegisterMultipleImmigrationsAtOnce" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="CollabCorp\LaravelImmigrations\Tests\RegisteringImmigrationsTest" file="$PROJECT_DIR$/tests/RegisteringImmigrationsTest.php" method="canRegisterMultipleImmigrationsAtOnce" scope="Method" />
+    <configuration name="RegisteringImmigrationsTest.ItRegistersTheImmigrations" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="CollabCorp\LaravelImmigrations\Tests\RegisteringImmigrationsTest" directory="$PROJECT_DIR$/tests" file="$PROJECT_DIR$/tests/RegisteringImmigrationsTest.php" method="ItRegistersTheImmigrations" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisteringImmigrationsTest.testItRegistersTheImmigrations" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="CollabCorp\LaravelImmigrations\Tests\RegisteringImmigrationsTest" file="$PROJECT_DIR$/tests/RegisteringImmigrationsTest.php" method="testItRegistersTheImmigrations" scope="Method" />
+    <configuration name="RunningRegisteredImmigrationsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="CollabCorp\LaravelImmigrations\Tests\RunningRegisteredImmigrationsTest" file="$PROJECT_DIR$/tests/RunningRegisteredImmigrationsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/tests" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.RegisteringImmigrationsTest.testItRegistersTheImmigrations" />
+      <item itemvalue="PHPUnit.tests" />
+      <item itemvalue="PHPUnit.RegisteringImmigrationsTest.ItRegistersTheImmigrations" />
+      <item itemvalue="PHPUnit.RunningRegisteredImmigrationsTest" />
       <item itemvalue="PHPUnit.RegisteringImmigrationsTest" />
-      <item itemvalue="PHPUnit.RegisteringImmigrationsTest.canRegisterMultipleImmigrationsAtOnce" />
+      <item itemvalue="PHPUnit.CommandsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.CommandsTest" />
         <item itemvalue="PHPUnit.RegisteringImmigrationsTest" />
-        <item itemvalue="PHPUnit.RegisteringImmigrationsTest.canRegisterMultipleImmigrationsAtOnce" />
-        <item itemvalue="PHPUnit.RegisteringImmigrationsTest.testItRegistersTheImmigrations" />
+        <item itemvalue="PHPUnit.RunningRegisteredImmigrationsTest" />
+        <item itemvalue="PHPUnit.RegisteringImmigrationsTest.ItRegistersTheImmigrations" />
       </list>
     </recent_temporary>
   </component>
@@ -448,60 +442,82 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539025237016</updated>
-      <workItem from="1539025238711" duration="17668000" />
+      <workItem from="1539025238711" duration="27991000" />
     </task>
+    <task id="LOCAL-00001" summary="Some tests and bug fixes :)">
+      <created>1539190452138</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539190452138</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Better facade API &amp; testing execution">
+      <created>1539195351816</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539195351816</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Usability tweaks &amp; command tests">
+      <created>1539199809455</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539199809455</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 25m 15s.xml">
+    <history-entry file="RegisteringImmigrationsTest_ItRegistersTheImmigrations - 2018.10.10 at 20h 55m 50s.xml">
+      <configuration name="RegisteringImmigrationsTest.ItRegistersTheImmigrations" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="RunningRegisteredImmigrationsTest - 2018.10.10 at 20h 55m 55s.xml">
+      <configuration name="RunningRegisteredImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 20h 55m 59s.xml">
       <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 31m 24s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CommandsTest - 2018.10.10 at 20h 56m 03s.xml">
+      <configuration name="CommandsTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 31m 30s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CommandsTest - 2018.10.10 at 20h 56m 20s.xml">
+      <configuration name="CommandsTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 31m 40s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2018.10.10 at 21h 04m 48s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 32m 00s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2018.10.10 at 21h 26m 05s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 32m 04s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2018.10.10 at 21h 27m 11s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 32m 29s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2018.10.10 at 21h 28m 02s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 32m 38s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 33m 20s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="RegisteringImmigrationsTest - 2018.10.10 at 08h 36m 37s.xml">
-      <configuration name="RegisteringImmigrationsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2018.10.10 at 21h 28m 36s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17668000" />
+    <option name="totallyTimeSpent" value="27991000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
       <window_info id="Favorites" sideWeight="0.5005348" side_tool="true" weight="0.24969475" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32941177" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -540,130 +556,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
     </ignored-roots>
+    <MESSAGE value="Some tests and bug fixes :)" />
+    <MESSAGE value="Better facade API &amp; testing execution" />
+    <MESSAGE value="Usability tweaks &amp; command tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Usability tweaks &amp; command tests" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Concerns/HasAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="261" column="26" selection-start-line="261" selection-start-column="26" selection-end-line="261" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/database/Query/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="1729" column="20" selection-start-line="1729" selection-start-column="20" selection-end-line="1729" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="1257" column="27" selection-start-line="1257" selection-start-column="27" selection-end-line="1257" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Immigrations/CopyAirports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Immigrations/CopyUsersAndAgents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="18" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ia-poc-redesign/packages/GHC/database-immigration/src/Immigrations/CopyFlightSchedules.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" selection-start-line="21" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/Commands/DbImmigrateCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="1238" column="30" selection-start-line="1238" selection-start-column="30" selection-end-line="1238" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2750">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/QueryProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Immigration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding>
-            <element signature="e#60#104#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/ConsoleOutput.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-372">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <element signature="e#51#111#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/Concerns/Singleton.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="34" column="64" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Terminal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1141">
@@ -733,16 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/QueryProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="e#50#105#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/immigrations.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -750,97 +646,311 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="4248">
-            <caret line="241" column="47" selection-start-line="241" selection-start-column="47" selection-end-line="241" selection-end-column="47" />
-            <folding>
-              <element signature="e#6#45#0" expanded="true" />
-              <element signature="e#6#45#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Container/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LaravelImmigrationsServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#50#121#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-909">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LaravelImmigrations.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/DB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-          <folding>
-            <element signature="e#50#107#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="202">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Facades/Immigrations.php">
+    <entry file="file://$PROJECT_DIR$/src/Database/QueryProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="e#59#114#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Guards.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        <state relative-caret-position="162">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Testing/WriterFake.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/DbImmigrateCommandTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
           <folding>
-            <element signature="e#50#107#0#PHP" expanded="true" />
+            <element signature="e#57#113#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Registry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+        <state relative-caret-position="184">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding>
             <element signature="e#51#108#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+    <entry file="file://$PROJECT_DIR$/src/Queue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="e#57#114#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="2370">
+          <caret line="154" column="32" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/RegisteringImmigrationsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#56#113#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1220">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-6">
+            <caret line="2" column="30" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/RunningRegisteredImmigrationsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="-1400">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
             <element signature="e#57#114#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/AuthMakeCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#43#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mockery/mockery/library/Mockery/MockInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Console/stubs/controller.stub">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="84" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contracts/Immigration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="19" selection-start-line="19" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <element signature="e#60#104#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Testing/ImmigrationFake.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <element signature="e#59#116#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Console/Commands/stubs/immigration.stub">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Input/InputInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="726" selection-start-line="726" selection-end-line="726" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Input/ArrayInput.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Input/Input.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="249" selection-start-line="249" selection-end-line="249" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/PendingCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithConsole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Console/ControllerMakeCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2700">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2646">
+          <caret line="210" column="23" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Console/Commands/MakeImmigrationCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/orchestra/testbench-core/src/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="390" column="20" selection-start-line="390" selection-start-column="20" selection-end-line="390" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/ConnectionInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2336">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contracts/DatabaseConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Facades/Immigrations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Console/Commands/DbImmigrateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaravelImmigrationsServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaravelImmigrations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CommandsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
         </state>
       </provider>
     </entry>

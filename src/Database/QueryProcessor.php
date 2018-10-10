@@ -1,12 +1,12 @@
 <?php
 
-namespace CollabCorp\LaravelImmigrations;
+namespace CollabCorp\LaravelImmigrations\Database;
 
 use CollabCorp\LaravelImmigrations\Console\ProgressBar;
+use CollabCorp\LaravelImmigrations\Contracts\QueryProcessor as QueryProcessorContract;
 use CollabCorp\LaravelImmigrations\Contracts\Writer;
 use Illuminate\Console\OutputStyle;
 use Illuminate\Database\Query\Builder;
-use CollabCorp\LaravelImmigrations\Contracts\QueryProcessor as QueryProcessorContract;
 
 /**
  * Class QueryProcessor

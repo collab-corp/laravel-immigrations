@@ -69,7 +69,11 @@ class LaravelImmigrations
      */
     public function instantiateImmigrations(): array
     {
-    	return array_map(function (string $immigration) {
+	    return array_map(function ($immigration) {
+		    if (is_object($immigration)) {
+			    return $immigration;
+		    }
+
     		return new $immigration($this->database);
 	    }, $this->registry->immigrations());
     }

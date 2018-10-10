@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * Class Immigrations
  *
- * @method static void run()
+ * @method static void run(string $from = null)
  * @purpose to provide an easy interface to interact with the underlying system(s).
  * @package CollabCorp\LaravelImmigrations\Facades
  */

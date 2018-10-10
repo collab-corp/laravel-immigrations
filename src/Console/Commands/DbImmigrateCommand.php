@@ -2,9 +2,9 @@
 
 namespace CollabCorp\LaravelImmigrations\Console\Commands;
 
-use CollabCorp\LaravelImmigrations\LaravelImmigrations;
+use CollabCorp\LaravelImmigrations\Contracts\DatabaseConnection;
+use CollabCorp\LaravelImmigrations\Facades\Immigrations;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
 
 class DbImmigrateCommand extends Command
 {
@@ -29,11 +29,8 @@ class DbImmigrateCommand extends Command
      */
     public function handle()
     {
-	    $immigrations = $this->laravel->make(
-		    LaravelImmigrations::class,
-		    ['connection' => DB::connection($this->option('from'))]
-	    );
+	    $from = $this->hasOption('from') ? $this->option('from') : null;
 
-        $immigrations->run();
+	    Immigrations::run($from);
     }
 }

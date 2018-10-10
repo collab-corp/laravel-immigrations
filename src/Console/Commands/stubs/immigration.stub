@@ -1,0 +1,34 @@
+<?php
+
+namespace DummyNamespace;
+
+use CollabCorp\LaravelImmigrations\Contracts\Immigration;
+use CollabCorp\LaravelImmigrations\Database;
+use CollabCorp\LaravelImmigrations\Queue;
+
+class DummyClass implements Immigration
+{
+    /**
+     * Whether the immigration should run
+     *
+     * @param Queue $immigrations
+     * @return bool
+     */
+    public function shouldRun(Queue $immigrations): bool
+    {
+        //
+    }
+
+    /**
+     * Run the immigration.
+     * Executing the database queries, migrating the data from the old database to the new.
+     *
+     * @param Database $database
+     *
+     * @return void|mixed
+     */
+    public function run(Database $database)
+    {
+        //
+    }
+}

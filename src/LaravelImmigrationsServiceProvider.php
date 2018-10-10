@@ -3,9 +3,9 @@
 namespace CollabCorp\LaravelImmigrations;
 
 use CollabCorp\LaravelImmigrations\Console\Commands\DbImmigrateCommand;
+use CollabCorp\LaravelImmigrations\Console\Commands\MakeImmigrationCommand;
 use CollabCorp\LaravelImmigrations\Database\QueryProcessor;
 use Illuminate\Console\OutputStyle;
-use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\ServiceProvider;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
@@ -21,7 +21,8 @@ class LaravelImmigrationsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                DbImmigrateCommand::class
+	            DbImmigrateCommand::class,
+	            MakeImmigrationCommand::class
             ]);
         }
     }
@@ -51,14 +52,5 @@ class LaravelImmigrationsServiceProvider extends ServiceProvider
 			    $app['console output']
 		    );
 	    });
-
-		$this->app->bind(Database::class, function ($app) {
-			return new Database(
-				$app[DatabaseManager::class]->connection(
-					config('immigrations.immigrate_from', 'old_database')
-				),
-				$app[Contracts\QueryProcessor::class]
-			);
-		});
     }
 }

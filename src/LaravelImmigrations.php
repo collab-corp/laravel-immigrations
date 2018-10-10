@@ -58,25 +58,15 @@ class LaravelImmigrations
     /**
      * LaravelImmigrations constructor.
      *
-     * @param Database $database
      * @param Registry $registry
      * @param Writer $output
      */
-    public function __construct(Database $database, Registry $registry, Writer $output)
+	public function __construct(Registry $registry, Writer $output)
     {
-        $this->database = $database;
         $this->registry = $registry;
         $this->output = $output;
 	    $this->queue = new Queue;
     }
-
-	/**
-	 * @return Database
-	 */
-	public function database(): Database
-	{
-		return $this->database;
-	}
 
 	/**
 	 * @return Registry
@@ -103,28 +93,15 @@ class LaravelImmigrations
 	}
 
     /**
-     * The instantiated immigrations
-     *
-     * @return array
-     */
-    public function instantiateImmigrations(): array
-    {
-	    return array_map(function ($immigration) {
-		    if (is_object($immigration)) {
-			    return $immigration;
-		    }
-
-    		return new $immigration($this->database);
-	    }, $this->registry->immigrations());
-    }
-
-    /**
      * Run the database data migrations
      *
+     * @param string|null $from
      * @throws \Throwable
      */
-    public function run(): void
+	public function run(string $from = null): void
     {
+	    $this->database = new Database($from ?? config('immigrations.immigrate_from', 'old_database'));
+
         $this->database
             ->connection()
             ->transaction(function () {
@@ -143,6 +120,22 @@ class LaravelImmigrations
 		            });
             });
     }
+
+	/**
+	 * The instantiated immigrations
+	 *
+	 * @return array
+	 */
+	private function instantiateImmigrations(): array
+	{
+		return array_map(function ($immigration) {
+			if (is_object($immigration)) {
+				return $immigration;
+			}
+
+			return new $immigration($this->database);
+		}, $this->registry->immigrations());
+	}
 
     /**
      * Set the order by for the given immigration

@@ -6,8 +6,8 @@ namespace CollabCorp\LaravelImmigrations;
 use CollabCorp\LaravelImmigrations\Contracts\QueryProcessor;
 use CollabCorp\LaravelImmigrations\Database\Concerns\DelegatesToConnection;
 use Illuminate\Database\Connection;
-use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Query\Builder as QueryBuilder;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class Database
@@ -48,13 +48,13 @@ class Database
 
 	/**
 	 * Database constructor.
-	 * @param ConnectionInterface $connection
+	 * @param string $connection
 	 * @param QueryProcessor $processor
 	 */
-	public function __construct(ConnectionInterface $connection, QueryProcessor $processor)
+	public function __construct(string $connection, QueryProcessor $processor = null)
     {
-	    $this->connection = $connection;
-        $this->queryProcessor = $processor;
+	    $this->connection = DB::connection($connection);
+	    $this->queryProcessor = $processor ?? resolve(QueryProcessor::class);
     }
 
     /**

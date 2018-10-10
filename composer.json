@@ -1,0 +1,49 @@
+{
+  "name": "collab-corp/laravel-immigration",
+  "description": "Tool for easily migrating data between databases.",
+  "type": "library",
+  "keywords": [
+    "collab-corp",
+    "collab",
+    "immigrations",
+    "laravel-immigrations",
+    "database-immigrations"
+  ],
+  "homepage": "https://github.com/collab-corp/laravel-immigrations",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jonas kervin Hansen (@sasin91)",
+      "email": "jonas.kerwin.hansen@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "laravel/framework": "^5.7"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.1",
+    "orchestra/testbench": "3.6.*|3.7.*",
+    "phpunit/phpunit": "^7.2"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "CollabCorp\\LaravelImmigrations\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CollabCorp\\LaravelImmigrations\\LaravelImmigrationsServiceProvider"
+      ],
+
+      "aliases": {
+        "Immigration": "CollabCorp\\LaravelImmigrations\\Facades\\Immigrations"
+      }
+    }
+  }
+}

@@ -22,6 +22,19 @@ You can install the package via composer:
 composer require collab-corp/laravel-immigrations
 ```
 
+Since composer isn't configured to look for classes in the ```database_path('Immigrations')``` path by default, you may need to add it in your composer.json autoload.classmap.
+```
+    // ...
+    "autoload": {
+        "classmap": [
+            "database/Immigrations",
+            "database/seeds",
+            "database/factories"
+        ],
+        // ...
+    }
+```
+
 ## Usage
 To create a new immigration, simply type
 ```php

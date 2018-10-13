@@ -9,11 +9,11 @@ class ProgressBar
 {
     public static function create(int $max, SymfonyStyle $console): SymfonyProgressBar
     {
-        return tap($console->createProgressBar($max), function (SymfonyProgressBar $progressBar) {
+        return tap($console->createProgressBar($max), function (SymfonyProgressBar $progressBar) use ($max) {
             $progressBar->setBarCharacter(config('immigrations.progress.bar_character', '#'));
             $progressBar->setProgressCharacter(config('immigrations.progress.progress_character', '->'));
             $progressBar->setFormat(config('immigrations.progress.format', 'debug'));
-            $progressBar->setBarWidth(100);
+            $progressBar->setBarWidth($max + 1);
         });
     }
 }

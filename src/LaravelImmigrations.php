@@ -102,22 +102,22 @@ class LaravelImmigrations
     {
 	    $this->database = new Database($from ?? config('immigrations.immigrate_from', 'old_database'));
 
+        $queue = $this->queue->push($this->instantiateImmigrations());
+
         $this->database
             ->connection()
-            ->transaction(function () {
-	            $this->queue
-		            ->push($this->instantiateImmigrations())
-		            ->run(function (Immigration $immigration) {
-			            $this->setDatabaseOrderForImmigration($immigration);
+            ->transaction(function () use ($queue) {
+                $queue->run(function (Immigration $immigration) {
+                    $this->setDatabaseOrderForImmigration($immigration);
 
-			            if ($this->queue->skipped($immigration)) {
-				            $this->output->warning('skipping immigration [' . get_class($immigration) . '].');
-				            return;
-			            }
+                    if ($this->queue->skipped($immigration)) {
+                        $this->output->warning('skipping immigration [' . get_class($immigration) . '].');
+                        return;
+                    }
 
-			            $this->output->info('running immigration [' . get_class($immigration) . '].');
-			            $immigration->run($this->database);
-		            });
+                    $this->output->info('running immigration [' . get_class($immigration) . '].');
+                    $immigration->run($this->database);
+                });
             });
     }
 

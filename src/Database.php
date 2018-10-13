@@ -108,7 +108,8 @@ class Database
 
         return $this->queryProcessor->chunk(
             $tableOrQuery->orderBy($this->orderColumn, $this->orderDirection),
-            $callback
+            $callback,
+            $tableOrQuery->limit ?? 1000
         );
     }
 }

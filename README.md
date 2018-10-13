@@ -116,8 +116,25 @@ class CopyUsers implements Immigration
 }
 ```
 
+### Customizing queries
+The ```$database``` instance passed to the Immigration provides conveniently delegates to the underlying Laravel database connection or builder and the each method accepts both a plain string and an query builder instance.
+
+Giving the developer freedom to customize a query builder and pass it to the ``each`` method.
+
+``` php
+    public function run(Database $database): void
+    {
+        $users = $database->table('users')->join('details', 'details.user_id', '=', 'users.id');
+    
+        $database->each($users, function ($user) use ($database) {
+            // ...
+        });
+```
+
 ### database order
 An Immigration may configure the database row order by defining the $orderBy and $orderDirection properties.
+* These properties takes precedence over a customized query builder.
+
 ```php
 class CopyUsers implements Immigration
 {

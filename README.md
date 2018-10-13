@@ -11,6 +11,8 @@ Rarely is that the case.
 
 This package provides an easy & elegant solution to that problem.
 ![Alt Text](https://media.giphy.com/media/583AMBvBSxpOjbHTSb/giphy.gif)
+- https://asciinema.org/a/1z4cJdZLOhtq75w8r2VHC3q0M
+
 ## Installation
 
 You can install the package via composer:

@@ -2,7 +2,6 @@
 
 namespace CollabCorp\LaravelImmigrations\Database\Concerns;
 
-
 use Illuminate\Database\Connection;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Query\Builder as QueryBuilder;

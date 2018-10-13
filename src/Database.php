@@ -2,7 +2,6 @@
 
 namespace CollabCorp\LaravelImmigrations;
 
-
 use CollabCorp\LaravelImmigrations\Contracts\QueryProcessor;
 use CollabCorp\LaravelImmigrations\Database\Concerns\DelegatesToConnection;
 use Illuminate\Database\Connection;
@@ -26,9 +25,9 @@ class Database
      */
     protected $connection;
 
-	/**
-	 * @var QueryProcessor
-	 */
+    /**
+     * @var QueryProcessor
+     */
     protected $queryProcessor;
 
 
@@ -46,15 +45,15 @@ class Database
      */
     public $orderDirection = 'desc';
 
-	/**
-	 * Database constructor.
-	 * @param string $connection
-	 * @param QueryProcessor $processor
-	 */
-	public function __construct(string $connection, QueryProcessor $processor = null)
+    /**
+     * Database constructor.
+     * @param string $connection
+     * @param QueryProcessor $processor
+     */
+    public function __construct(string $connection, QueryProcessor $processor = null)
     {
-	    $this->connection = DB::connection($connection);
-	    $this->queryProcessor = $processor ?? resolve(QueryProcessor::class);
+        $this->connection = DB::connection($connection);
+        $this->queryProcessor = $processor ?? resolve(QueryProcessor::class);
     }
 
     /**

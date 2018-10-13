@@ -20,26 +20,26 @@ class LaravelImmigrations
      */
     protected $database;
 
-	/**
-	 * The registry holding the registered immigrations
-	 *
-	 * @var Registry
-	 */
+    /**
+     * The registry holding the registered immigrations
+     *
+     * @var Registry
+     */
     protected $registry;
 
-	/**
-	 * The output we'll write status messages to
-	 *
-	 * @var Writer
-	 */
+    /**
+     * The output we'll write status messages to
+     *
+     * @var Writer
+     */
     protected $output;
 
-	/**
-	 * The immigrations queue
-	 *
-	 * @var Queue
-	 */
-	protected $queue;
+    /**
+     * The immigrations queue
+     *
+     * @var Queue
+     */
+    protected $queue;
 
     /**
      * The default column to order the database records by
@@ -61,36 +61,36 @@ class LaravelImmigrations
      * @param Registry $registry
      * @param Writer $output
      */
-	public function __construct(Registry $registry, Writer $output)
+    public function __construct(Registry $registry, Writer $output)
     {
         $this->registry = $registry;
         $this->output = $output;
-	    $this->queue = new Queue;
+        $this->queue = new Queue;
     }
 
-	/**
-	 * @return Registry
-	 */
-	public function registry(): Registry
-	{
-		return $this->registry;
-	}
+    /**
+     * @return Registry
+     */
+    public function registry(): Registry
+    {
+        return $this->registry;
+    }
 
-	/**
-	 * @return Writer
-	 */
-	public function output(): Writer
-	{
-		return $this->output;
-	}
+    /**
+     * @return Writer
+     */
+    public function output(): Writer
+    {
+        return $this->output;
+    }
 
-	/**
-	 * @return Queue
-	 */
-	public function queue(): Queue
-	{
-		return $this->queue;
-	}
+    /**
+     * @return Queue
+     */
+    public function queue(): Queue
+    {
+        return $this->queue;
+    }
 
     /**
      * Run the database data migrations
@@ -98,9 +98,9 @@ class LaravelImmigrations
      * @param string|null $from
      * @throws \Throwable
      */
-	public function run(string $from = null): void
+    public function run(string $from = null): void
     {
-	    $this->database = new Database($from ?? config('immigrations.immigrate_from', 'old_database'));
+        $this->database = new Database($from ?? config('immigrations.immigrate_from', 'old_database'));
 
         $queue = $this->queue->push($this->instantiateImmigrations());
 
@@ -121,21 +121,21 @@ class LaravelImmigrations
             });
     }
 
-	/**
-	 * The instantiated immigrations
-	 *
-	 * @return array
-	 */
-	private function instantiateImmigrations(): array
-	{
-		return array_map(function ($immigration) {
-			if (is_object($immigration)) {
-				return $immigration;
-			}
+    /**
+     * The instantiated immigrations
+     *
+     * @return array
+     */
+    private function instantiateImmigrations(): array
+    {
+        return array_map(function ($immigration) {
+            if (is_object($immigration)) {
+                return $immigration;
+            }
 
-			return new $immigration($this->database);
-		}, $this->registry->immigrations());
-	}
+            return new $immigration($this->database);
+        }, $this->registry->immigrations());
+    }
 
     /**
      * Set the order by for the given immigration

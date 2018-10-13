@@ -2,7 +2,6 @@
 
 namespace CollabCorp\LaravelImmigrations;
 
-
 use CollabCorp\LaravelImmigrations\Console\Concerns\DelegatesToOutput;
 use CollabCorp\LaravelImmigrations\Contracts\Writer;
 use Illuminate\Console\OutputStyle;
@@ -16,29 +15,29 @@ class Console implements Writer
 {
     use DelegatesToOutput;
 
-	/**
-	 * The console output style
-	 * 
-	 * @var OutputStyle
-	 */
+    /**
+     * The console output style
+     *
+     * @var OutputStyle
+     */
     protected $output;
 
-	/**
-	 * Console constructor.
-	 * 
-	 * @param OutputStyle $output
-	 */
-	public function __construct(OutputStyle $output)
-	{
-		$this->output = $output;
-	}
+    /**
+     * Console constructor.
+     *
+     * @param OutputStyle $output
+     */
+    public function __construct(OutputStyle $output)
+    {
+        $this->output = $output;
+    }
 
-	public function newLine()
-	{
-		$this->output->newLine();
-	}
+    public function newLine()
+    {
+        $this->output->newLine();
+    }
 
-	public function writeLine(string $value)
+    public function writeLine(string $value)
     {
         $this->output->writeln($value);
     }

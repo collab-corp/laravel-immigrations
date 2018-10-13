@@ -21,14 +21,14 @@ class LaravelImmigrationsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-	            DbImmigrateCommand::class,
-	            MakeImmigrationCommand::class
+                DbImmigrateCommand::class,
+                MakeImmigrationCommand::class
             ]);
         }
 
-	    $this->publishes([
-		    __DIR__.'/../config/immigrations.php' => config_path('immigrations.php'),
-	    ]);
+        $this->publishes([
+            __DIR__.'/../config/immigrations.php' => config_path('immigrations.php'),
+        ]);
     }
 
     /**
@@ -38,23 +38,23 @@ class LaravelImmigrationsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-    	$this->app->singleton(Registry::class);
+        $this->app->singleton(Registry::class);
 
-    	$this->app->singleton('console output', function() {
-    		return new OutputStyle(new ArgvInput, new ConsoleOutput);
-	    });
+        $this->app->singleton('console output', function () {
+            return new OutputStyle(new ArgvInput, new ConsoleOutput);
+        });
 
-	    $this->app->bind(Contracts\Writer::class, function ($app) {
-		    return new Console(
-			    $app['console output']
-		    );
-	    });
+        $this->app->bind(Contracts\Writer::class, function ($app) {
+            return new Console(
+                $app['console output']
+            );
+        });
 
-    	$this->app->bind(Contracts\QueryProcessor::class, function ($app) {
-    		return new QueryProcessor(
-			    $app[Contracts\Writer::class],
-			    $app['console output']
-		    );
-	    });
+        $this->app->bind(Contracts\QueryProcessor::class, function ($app) {
+            return new QueryProcessor(
+                $app[Contracts\Writer::class],
+                $app['console output']
+            );
+        });
     }
 }

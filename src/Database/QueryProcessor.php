@@ -23,19 +23,19 @@ class QueryProcessor implements QueryProcessorContract
      */
     protected $writer;
 
-	/**
-	 * The console output
-	 *
-	 * @var OutputStyle
-	 */
+    /**
+     * The console output
+     *
+     * @var OutputStyle
+     */
     protected $output;
 
-	/**
-	 * QueryProcessor constructor.
-	 *
-	 * @param Writer $writer
-	 * @param OutputStyle $output
-	 */
+    /**
+     * QueryProcessor constructor.
+     *
+     * @param Writer $writer
+     * @param OutputStyle $output
+     */
     public function __construct(Writer $writer, OutputStyle $output)
     {
         $this->writer = $writer;

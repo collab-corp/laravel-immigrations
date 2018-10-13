@@ -2,7 +2,6 @@
 
 namespace CollabCorp\LaravelImmigrations\Facades;
 
-
 use CollabCorp\LaravelImmigrations\LaravelImmigrations;
 use Illuminate\Support\Facades\Facade;
 
@@ -15,33 +14,33 @@ use Illuminate\Support\Facades\Facade;
  */
 class Immigrations extends Facade
 {
-	protected static function getFacadeAccessor()
-	{
-		return LaravelImmigrations::class;
-	}
+    protected static function getFacadeAccessor()
+    {
+        return LaravelImmigrations::class;
+    }
 
-	public static function register($immigrations)
-	{
-		static::getFacadeRoot()->registry()->register($immigrations);
-	}
+    public static function register($immigrations)
+    {
+        static::getFacadeRoot()->registry()->register($immigrations);
+    }
 
-	public static function registered(): array
-	{
-		return static::getFacadeRoot()->registry()->registered();
-	}
+    public static function registered(): array
+    {
+        return static::getFacadeRoot()->registry()->registered();
+    }
 
-	public static function skipped(): array
-	{
-		return static::getFacadeRoot()->queue()->getSkipped();
-	}
+    public static function skipped(): array
+    {
+        return static::getFacadeRoot()->queue()->getSkipped();
+    }
 
-	public static function executed(): array
-	{
-		return static::getFacadeRoot()->queue()->getExecuted();
-	}
+    public static function executed(): array
+    {
+        return static::getFacadeRoot()->queue()->getExecuted();
+    }
 
-	public static function remaining(): array
-	{
-		return static::getFacadeRoot()->queue()->getRemaining();
-	}
+    public static function remaining(): array
+    {
+        return static::getFacadeRoot()->queue()->getRemaining();
+    }
 }

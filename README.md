@@ -1,9 +1,9 @@
 # Data migrations for Artisans
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/collab-corp/laravel-immigrations.svg?style=flat-square)](https://packagist.org/packages/collab-corp/laravel-immigrations)
-[![Build Status](https://img.shields.io/travis/collab-corp/laravel-immigrations/master.svg?style=flat-square)](https://travis-ci.org/collab-corp/laravel-immigrations)
-[![Quality Score](https://img.shields.io/scrutinizer/g/collab-corp/laravel-immigrations.svg?style=flat-square)](https://scrutinizer-ci.com/g/collab-corp/laravel-immigrations)
-[![Total Downloads](https://img.shields.io/packagist/dt/collab-corp/laravel-immigrations.svg?style=flat-square)](https://packagist.org/packages/collab-corp/laravel-immigrations)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/collab-corp/laravel-immigrations.svg?style=flat-square)](https://packagist.org/packages/collab-corp/laravel-immigration)
+[![Build Status](https://img.shields.io/travis/collab-corp/laravel-immigrations/master.svg?style=flat-square)](https://travis-ci.org/collab-corp/laravel-immigration)
+[![Quality Score](https://img.shields.io/scrutinizer/g/collab-corp/laravel-immigrations.svg?style=flat-square)](https://scrutinizer-ci.com/g/collab-corp/laravel-immigration)
+[![Total Downloads](https://img.shields.io/packagist/dt/collab-corp/laravel-immigrations.svg?style=flat-square)](https://packagist.org/packages/collab-corp/laravel-immigration)
 
 When it comes to database migrations, we often tend to think of it as something that'll run once and never be opened again.
 
@@ -18,7 +18,7 @@ This package provides an easy & elegant solution to that problem.
 You can install the package via composer:
 
 ```bash
-composer require collab-corp/laravel-immigrations
+composer require collab-corp/laravel-immigration
 ```
 
 Since composer isn't configured to look for classes in the ```database_path('Immigrations')``` path by default, you may need to add it in your composer.json autoload.classmap.

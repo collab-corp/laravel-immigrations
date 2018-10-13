@@ -1,5 +1,3 @@
-#* DO NOT USE YET.
-
 # Data migrations for Artisans
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/collab-corp/laravel-immigrations.svg?style=flat-square)](https://packagist.org/packages/collab-corp/laravel-immigrations)
@@ -12,8 +10,7 @@ When it comes to database migrations, we often tend to think of it as something 
 Rarely is that the case.
 
 This package provides an easy & elegant solution to that problem.
-
-@TODO: Insert "animated_terminal_output.gif"
+![Alt Text](https://media.giphy.com/media/583AMBvBSxpOjbHTSb/giphy.gif)
 ## Installation
 
 You can install the package via composer:
